@@ -1,6 +1,6 @@
 # CFDataStatisticsDemo
 数据埋点统计 通过runtime来实现埋点数据的 比传统的在每个类中添加脏代码好多了，而且这种方式比传统的更利于维护性和可移植性。这种通过分类的形式无污染的嵌入
-代码中，只需要plist文件中添加对应的UIViewController的PageIDs和ControlEventIDs即可。本代码也对读取plist文件进行了XCTest单元测试，即白盒测试。
+代码中，只需要plist文件中添加对应的UIViewController的PageIDs和ControlEventIDs即可。本代码也对读取plist文件进行了XCTest单元测试，即白盒测试，按Command+U组合键即可。
 测试情况：一种情况是基于plist列表去校验代码，这里就要反过来，根据代码去校验plist是否有缺失。但问题来了，一个项目中响应函数往往是非常多的，并不是任何
 响应函数都需要埋点。需要埋点的响应函数与其他响应函数并没有区别。
 一种是如果代码中新增了响应事件并且该响应事件是在PM要求的埋点列表中，但是plist有可能会漏掉该事件。这种情况是比较棘手的。
